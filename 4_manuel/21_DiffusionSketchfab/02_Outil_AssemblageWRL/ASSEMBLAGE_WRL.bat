@@ -1,0 +1,1 @@
+type *.wrl >> ASSEMBLAGE.wrl

@@ -2,9 +2,19 @@
 from lxml import etree
 import numpy as np
 from xlwt import Workbook
+with open('08Aero.txt', 'r') as f:
+    liste_ori=f.readlines()
 
-entree = str(input("Entrez le nom du dossier de l'orientation: "))
+entree='Ori-'+liste_ori[0].strip()
+
+del liste_ori[0]
+
+with open('08Aero.txt', 'w') as w:
+    for ori_out in liste_ori:
+        w.write(ori_out)
+        
 fich_residu = entree + "/residus.xml"
+print(fich_residu)
 tree = etree.parse(entree+"/residus.xml")
 
 book = Workbook()
@@ -99,16 +109,14 @@ for x in vi_res:
             commentaire+= " / Image comprenant moins de 200 pts homologues"
         else:
             commentaire+= "Image comprenant moins de 200 pts homologues"
-    if residu_OneIm[i]["PercOk"]<70:
+    if residu_OneIm[i]["PercOk"]<80:
         if commentaire!='':
             commentaire+= " / Pourcentage des points homologues justes en-dessous de 70%"
         else:
             commentaire+= "Pourcentage des points homologues justes en-dessous de 70%"    
     if commentaire!='':
-        feuil1.write(i+4,5, commentaire)     
+        feuil1.write(i+7,5, commentaire)     
     commentaire=''
     i+=1
 
-book.save(entree+'_residus.xls')
-
-input("Enter pour finir:")
+book.save('03'+entree+'_residus.xls')

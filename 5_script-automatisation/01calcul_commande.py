@@ -22,7 +22,7 @@ def transfo_to_pattern(list_file):
 
         pattern=pattern[:-1]+'"'
         return pattern
-        
+
 
 
 #Variable que l'utlisateur doit rentrer
@@ -95,7 +95,7 @@ for i in range(nb):
                 tapas_autocal='mm3d Tapas AutoCal '+all_img_patern+' InCal='+mod_calib+' InOri='+figee[q-1]+' Out=TerLocal'              
         aero.append(tapas+'\n')
         aero.append('02analyse-resultat.py\n')
-        
+
 
 aero.append(tapas_autocal+'\n')
 aero.append('02analyse-resultat.py\n')
@@ -129,17 +129,16 @@ if geo_bool == 'O':
                 r.write(':Caclul du référencement de notre aérotriangulation\n')
 
         if georef=='SB':
-                image_BascQT = str(input("Indiquez les images pour la saisie des points pour le facteur d'échelle (Exemple: IMG_1502.JPG|IMG_2365): "))
+                image_BascQT = choose_filename('Choisir les images pour saisir le facteur d\'échelle ')
                 echelle_BascQT = str(input("Indiquez la longueur en m entre les 2 points saisis pour le facteur d'échelle (Exemple: 5.22): "))
-                image_MasqQT = str(input("Indiquez les images pour la sélection des plans horizontaux (Exemple: IMG_1502.JPG|IMG_2365): "))
-
+                image_MasqQT = choose_filename('Choisir les images pour saisir le plan horizontal ')
+                pattern_bascu = transfo_to_pattern(image_BascQT) 
                 with open(referencement, 'a') as f:
-                        f.write('mm3d SaisieBascQT "'+image_BascQT+'" TerLocal MesureSBbascule.xml\n')
-                        liste_image_MasqQT = image_MasqQT.split('|')
-                        for image in liste_image_MasqQT:
+                        f.write('mm3d SaisieBascQT '+pattern_bascu+' TerLocal MesureSBbascule.xml\n')
+                        for image in image_MasqQT:
                                 f.write('mm3d SaisieMasqQT "'+image+'" Post=_MasqPlan\n')
-                        f.write('mm3d SBGlobBascule ".*.JPG" TerLocal MesureSBbascule-S2D.xml TerSBbascule PostPlan=_MasqPlan DistFS='+echelle_BascQT+'\n')
-                        f.write('mm3d AperiCloud ".*.JPG" TerSBbascule\n')
+                        f.write('mm3d SBGlobBascule '+all_img_patern+' TerLocal MesureSBbascule-S2D.xml TerSBbascule PostPlan=_MasqPlan DistFS='+echelle_BascQT+'\n')
+                        f.write('mm3d AperiCloud '+all_img_patern+' TerSBbascule\n')
                         f.write(output)
                         nom_aero = 'TerSBbascule'
         elif georef == 'GCP':
@@ -154,12 +153,14 @@ if geo_bool == 'O':
                 for points in fichier_GCP:
                         line_point = points.split(' ')
                         num_pts.append(line_point[0])
-
+                        print(points)
+                        
                 image_for_pts = []
                 for i in range(3):
-                        num = num_pts[i]
-                        image_num = str(input("Indiquer les images pour la saisie initiale du point "+num+" (Exemple: IMG_2535.JPG|IMG_2542.JPG): "))
-                        image_for_pts.append({"num":num, "mm3d_saisie": 'mm3d SaisieAppuisInitQT "'+image_num+'" TerLocal '+num+' MesureInitiale.xml\n'})
+                        num = str(input("Indiquer le numéro de points utilisés le premier référencement approximatif "))
+                        list_image_num = choose_filename('Choisir les images pour la saisie du point'+num)
+                        image_num = transfo_to_pattern(list_image_num)
+                        image_for_pts.append({"num":num, "mm3d_saisie": 'mm3d SaisieAppuisInitQT '+image_num+' TerLocal '+num+' MesureInitiale.xml\n'})
 
                 prec_pts = str(input("Indiquer la précision des coordonnées des points GCP en m (Exemple: 0.02): "))
                 prec_image = str(input("Indiquer la précision de sélection des points dans les images en px (Exemple: 1): "))
@@ -167,12 +168,12 @@ if geo_bool == 'O':
                         r.write('mm3d GCPConvert AppInFile '+ GCP_txt+' Out='+GCP_xml+'\n')
                         for dico in image_for_pts:
                                 r.write(dico['mm3d_saisie'])
-                        r.write('mm3d GCPBascule ".*.JPG" TerLocal TerIni '+GCP_xml+' "MesureInitiale-S2D.xml"\n')
-                        r.write('mm3d SaisieAppuisPredicQT ".*.JPG" TerIni '+GCP_xml+' MesureFinal.xml\n')
-                        r.write('mm3d GCPBascule ".*.JPG" TerIni TerIni2 '+GCP_xml+' "MesureFinal-S2D.xml"\n')
-                        r.write('mm3d Campari ".*.JPG" TerIni2 TerFinal GCP=['+GCP_xml+','+prec_pts+',MesureFinal-S2D.xml,'+prec_image+']\n')
+                        r.write('mm3d GCPBascule '+all_img_patern+' TerLocal TerIni '+GCP_xml+' "MesureInitiale-S2D.xml"\n')
+                        r.write('mm3d SaisieAppuisPredicQT '+all_img_patern+' TerIni '+GCP_xml+' MesureFinal.xml\n')
+                        r.write('mm3d GCPBascule '+all_img_patern+' TerIni TerIni2 '+GCP_xml+' "MesureFinal-S2D.xml"\n')
+                        r.write('mm3d Campari '+all_img_patern+' TerIni2 TerFinal GCP=['+GCP_xml+','+prec_pts+',MesureFinal-S2D.xml,'+prec_image+']\n')
                         r.write('Pause\n')
-                        r.write('mm3d AperiCloud ".*.JPG" TerFinal\n')
+                        r.write('mm3d AperiCloud '+all_img_patern+' TerFinal\n')
                         r.write(output)
                         nom_aero = 'TerFinal'
 
@@ -189,7 +190,7 @@ with open(aerotriangulation, 'a') as aer:
                 aer.write(referencement)
         else:
                 aer.write(output)
-                
+
 
 with open(output, 'w') as p:
         run_commande.append('04points_denses.bat\n')

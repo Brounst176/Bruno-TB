@@ -22,10 +22,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2520609.8312641535885632</xmin>
-      <ymin>1150416.86934505449607968</ymin>
-      <xmax>2520672.25999621720984578</xmax>
-      <ymax>1150449.68184505449607968</ymax>
+      <xmin>2520613.06620754208415747</xmin>
+      <ymin>1150420.75695246015675366</ymin>
+      <xmax>2520675.49493960570544004</xmax>
+      <ymax>1150453.56945246015675366</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -74,7 +74,7 @@
       </filegroup>
     </legendlayer>
   </legend>
-  <Composer title="eglise station" visible="1">
+  <Composer title="eglise station" visible="0">
     <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="" alignmentSnap="1" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="210" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
       <symbol alpha="1" clip_to_extent="1" type="fill" name="">
         <layer pass="0" class="SimpleFill" locked="0">
@@ -171,7 +171,13 @@
           <customproperties/>
         </ComposerItem>
       </ComposerMap>
-      <customproperties/>
+      <customproperties>
+        <property key="imageCropMarginBottom" value="0"/>
+        <property key="imageCropMarginLeft" value="0"/>
+        <property key="imageCropMarginRight" value="0"/>
+        <property key="imageCropMarginTop" value="0"/>
+        <property key="imageCropToContents" value="false"/>
+      </customproperties>
     </Composition>
   </Composer>
   <projectlayers>
@@ -1620,8 +1626,7 @@ def my_form_open(dialog, layer, feature):
       <layer style="" id="Fond_ASIT_VD___cadastral20180611141146283"/>
       <checked-legend-nodes id="station20180611141256851">
         <checked-legend-node id="3"/>
-        <checked-legend-node id="4"/>
-        <checked-legend-node id="0"/>
+        <checked-legend-node id="1"/>
         <checked-legend-node id="2"/>
       </checked-legend-nodes>
       <checked-legend-nodes id="visee20180611145248123">

@@ -3,15 +3,15 @@
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
-  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="station20180611141256851" source="C:/Users/bruno.dellacas/Documents/Bruno-TB/6_terrain/data-QGIS/station.shp" name="station">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="cible20180611141522255" source="C:/Users/bruno.dellacas/Documents/Bruno-TB/6_terrain/data-QGIS/cible.shp" name="cible">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="cible20180611141522255" source="C:/Users/bruno.dellacas/Documents/Bruno-TB/6_terrain/data-QGIS/cible.shp" name="cible">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="visee20180611145248123" source="C:/Users/bruno.dellacas/Documents/Bruno-TB/6_terrain/data-QGIS/visee.shp" name="visee">
+    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="visee20180611145248123" source="C:/Users/bruno.dellacas/Documents/Bruno-TB/6_terrain/data-QGIS/visee.shp" name="visee">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Checked" id="Fond_ASIT_VD___cadastral20180611141146283" source="contextualWMSLegend=0&amp;crs=EPSG:2056&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=asitvd.fond_cadastral&amp;styles=default&amp;tileDimensions=ELEVATION%3D0;DIM1%3Ddefault&amp;tileMatrixSet=2056&amp;url=http://ows.asitvd.ch/wmts?" name="Fond ASIT VD - cadastral">
@@ -22,10 +22,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2520613.06620754208415747</xmin>
-      <ymin>1150420.75695246015675366</ymin>
-      <xmax>2520675.49493960570544004</xmax>
-      <ymax>1150453.56945246015675366</ymax>
+      <xmin>2520613.71475085243582726</xmin>
+      <ymin>1150426.900469318497926</ymin>
+      <xmax>2520644.92911688424646854</xmax>
+      <ymax>1150443.306719318497926</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -58,13 +58,13 @@
         <legendlayerfile isInOverview="0" layerid="station20180611141256851" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="cible" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="cible" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="cible20180611141522255" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="cible20180611141522255" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="visee" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="visee" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
         <legendlayerfile isInOverview="0" layerid="visee20180611145248123" visible="1"/>
       </filegroup>
     </legendlayer>
@@ -91,7 +91,7 @@
           <prop k="style" v="solid"/>
         </layer>
       </symbol>
-      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="19.6869" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="../../../../../PROGRA~1/QGIS2~1.18/apps/qgis/svg/arrows/NorthArrow_04.svg" northOffset="0" pictureHeight="31.3053" mapId="-1" anchorPoint="0">
+      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="19.6868" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="../../../../../PROGRA~1/QGIS2~1.18/apps/qgis/svg/arrows/NorthArrow_04.svg" northOffset="0" pictureHeight="31.3053" mapId="-1" anchorPoint="0">
         <ComposerItem pagey="13.0292" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="267.224" y="13.0292" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="20.2281" outlineWidth="0.3" excludeFromExports="0" uuid="{cdb9270a-1ae6-44e6-8f86-b46b60e09a62}" height="31.3053" itemRotation="0" frame="false" pagex="267.224">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -105,7 +105,7 @@
         <fillColor2 alpha="255" red="255" blue="255" green="255"/>
         <strokeColor alpha="255" red="0" blue="0" green="0"/>
         <textColor alpha="255" red="0" blue="0" green="0"/>
-        <ComposerItem pagey="179.783" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="13.9925" y="179.783" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="89.6763" outlineWidth="0.3" excludeFromExports="0" uuid="{96da2af3-e96a-42be-b6d0-53828cc0184c}" height="20" itemRotation="0" frame="false" pagex="13.9925">
+        <ComposerItem pagey="179.783" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="13.9925" y="179.783" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="89.6764" outlineWidth="0.3" excludeFromExports="0" uuid="{96da2af3-e96a-42be-b6d0-53828cc0184c}" height="20" itemRotation="0" frame="false" pagex="13.9925">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -161,11 +161,203 @@
         </ComposerItem>
       </ComposerLegend>
       <ComposerMap followPreset="true" mapRotation="0" keepLayerSet="false" followPresetName="Eglise station" id="0" previewMode="Cache" drawCanvasItems="true">
-        <Extent ymin="1150415.15291839092969894" xmin="2520607.88784233992919326" ymax="1150452.44089558022096753" xmax="2520662.48784239543601871"/>
+        <Extent ymin="1150415.15291839092969894" xmin="2520607.88784233992919326" ymax="1150452.44088888145051897" xmax="2520662.48784239543601871"/>
         <LayerSet/>
         <Grid/>
+        <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{bbd82e40-4919-4812-9afe-00dfea68e5f1}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grille 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+          <lineStyle>
+            <symbol alpha="1" clip_to_extent="1" type="line" name="">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="0,0,0,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              </layer>
+            </symbol>
+          </lineStyle>
+          <markerStyle>
+            <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="0"/>
+                <prop k="color" v="0,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="name" v="circle"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0"/>
+                <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="diameter"/>
+                <prop k="size" v="2"/>
+                <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+            </symbol>
+          </markerStyle>
+          <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+        </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
         <ComposerItem pagey="13.0292" page="1" id="" lastValidViewScaleFactor="2.07632" positionMode="0" positionLock="false" x="13.9925" y="13.0292" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="273.46" outlineWidth="0.3" excludeFromExports="0" uuid="{b5087194-7d0b-4a0b-85b1-4047b1fd4cd6}" height="186.754" itemRotation="0" frame="false" pagex="13.9925">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerMap>
+      <customproperties>
+        <property key="imageCropMarginBottom" value="0"/>
+        <property key="imageCropMarginLeft" value="0"/>
+        <property key="imageCropMarginRight" value="0"/>
+        <property key="imageCropMarginTop" value="0"/>
+        <property key="imageCropToContents" value="false"/>
+      </customproperties>
+    </Composition>
+  </Composer>
+  <Composer title="clocher station" visible="1">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="" alignmentSnap="1" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="210" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+      <symbol alpha="1" clip_to_extent="1" type="fill" name="">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="color" v="255,255,255,255"/>
+          <prop k="joinstyle" v="miter"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="0,0,0,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
+        </layer>
+      </symbol>
+      <ComposerPicture resizeMode="0" svgBorderWidth="0.2" pictureRotation="0" pictureWidth="19.6868" svgFillColor="255,255,255,255" svgBorderColor="0,0,0,255" northMode="0" file="../../../../../PROGRA~1/QGIS2~1.18/apps/qgis/svg/arrows/NorthArrow_04.svg" northOffset="0" pictureHeight="31.3053" mapId="-1" anchorPoint="0">
+        <ComposerItem pagey="58.0897" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="205.366" y="58.0897" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="20.2281" outlineWidth="0.3" excludeFromExports="0" uuid="{7ac75838-2785-48f6-bb44-2a1e9ca50c46}" height="31.3053" itemRotation="0" frame="false" pagex="205.366">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <dataDefinedSource expr="" field="" active="false" useExpr="true"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerPicture>
+      <ComposerScaleBar lineCapStyle="square" style="Single Box" numMapUnitsPerScaleBarUnit="1" segmentSizeMode="0" alignment="0" numSegments="2" segmentMillimeters="25.1211" lineJoinStyle="miter" minBarWidth="50" numUnitsPerSegment="5" units="1" labelBarSpace="4" outlineWidth="0.5" numSegmentsLeft="0" maxBarWidth="150" height="3" boxContentSpace="2" mapId="0" unitLabel=" m">
+        <scaleBarFont description="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" style=""/>
+        <fillColor alpha="255" red="0" blue="0" green="0"/>
+        <fillColor2 alpha="255" red="255" blue="255" green="255"/>
+        <strokeColor alpha="255" red="0" blue="0" green="0"/>
+        <textColor alpha="255" red="0" blue="0" green="0"/>
+        <ComposerItem pagey="126.049" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="84.9161" y="126.049" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="64.7922" outlineWidth="0.3" excludeFromExports="0" uuid="{355f4c44-6460-490f-a6a3-82fd3bde7677}" height="19.3421" itemRotation="0" frame="false" pagex="84.9161">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerScaleBar>
+      <ComposerLegend symbolWidth="7" title="" rasterBorderWidth="0" titleAlignment="1" map="0" wmsLegendWidth="50" rasterBorderColor="0,0,0,255" wrapChar="" fontColor="#000000" legendFilterByAtlas="0" columnCount="1" wmsLegendHeight="25" columnSpace="2" symbolHeight="4" equalColumnWidth="0" resizeToContents="1" splitLayer="0" boxSpace="3" rasterBorder="1">
+        <styles>
+          <style marginBottom="2" name="title">
+            <styleFont description="MS Shell Dlg 2,16,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="1" name="group">
+            <styleFont description="Lucida Sans,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="subgroup">
+            <styleFont description="Lucida Sans,12,-1,5,50,0,1,0,0,0" style=""/>
+          </style>
+          <style marginTop="3" name="symbol">
+            <styleFont description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="3" marginLeft="5" name="symbolLabel">
+            <styleFont description="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+        </styles>
+        <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+          <customproperties/>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="station20180611141256851" source="C:/Users/bruno.dellacas/Documents/Bruno-TB/6_terrain/data-QGIS/station.shp" name="station">
+            <customproperties>
+              <property key="legend/label-0" value="MS60"/>
+              <property key="legend/node-order" value="0"/>
+            </customproperties>
+          </layer-tree-layer>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="visee20180611145248123" source="C:/Users/bruno.dellacas/Documents/Bruno-TB/6_terrain/data-QGIS/visee.shp" name="visee">
+            <customproperties>
+              <property key="legend/label-2" value="bilateral"/>
+              <property key="legend/node-order" value="2"/>
+            </customproperties>
+          </layer-tree-layer>
+        </layer-tree-group>
+        <ComposerItem pagey="61.7246" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="97.7058" y="61.7246" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="32.7" outlineWidth="0.3" excludeFromExports="0" uuid="{dedcb123-1cbb-4baa-be40-a26e2f02a974}" height="35" itemRotation="0" frame="false" pagex="97.7058">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLegend>
+      <ComposerMap followPreset="true" mapRotation="0" keepLayerSet="false" followPresetName="Clocher station" id="0" previewMode="Cache" drawCanvasItems="true">
+        <Extent ymin="1150426.53445786470547318" xmin="2520609.70855430886149406" ymax="1150443.91047552274540067" xmax="2520637.70855433773249388"/>
+        <LayerSet/>
+        <Grid/>
+        <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{bbd82e40-4919-4812-9afe-00dfea68e5f1}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grille 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+          <lineStyle>
+            <symbol alpha="1" clip_to_extent="1" type="line" name="">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="0,0,0,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              </layer>
+            </symbol>
+          </lineStyle>
+          <markerStyle>
+            <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="0"/>
+                <prop k="color" v="0,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="name" v="circle"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0"/>
+                <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="diameter"/>
+                <prop k="size" v="2"/>
+                <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+            </symbol>
+          </markerStyle>
+          <annotationFontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+        </ComposerMapGrid>
+        <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+        <ComposerItem pagey="58.0897" page="1" id="" lastValidViewScaleFactor="3.75051" positionMode="0" positionLock="false" x="84.9161" y="58.0897" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="140.678" outlineWidth="0.3" excludeFromExports="0" uuid="{1c0ef32e-597b-41be-9ab1-6a41720a5e34}" height="87.3009" itemRotation="0" frame="false" pagex="84.9161">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -649,10 +841,10 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr=" &quot;Appareil&quot;  ||  &quot;secteur&quot; " forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
-          <category render="false" symbol="0" value="MS60clocher" label="MS60clocher"/>
-          <category render="true" symbol="1" value="MS60eglise" label="MS60eglise"/>
-          <category render="true" symbol="2" value="P40eglise" label="P40eglise"/>
-          <category render="true" symbol="3" value="FARO FOCUSeglise" label="FARO FOCUSeglise"/>
+          <category render="true" symbol="0" value="MS60clocher" label="MS60clocher"/>
+          <category render="false" symbol="1" value="MS60eglise" label="MS60eglise"/>
+          <category render="false" symbol="2" value="P40eglise" label="P40eglise"/>
+          <category render="false" symbol="3" value="FARO FOCUSeglise" label="FARO FOCUSeglise"/>
         </categories>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
@@ -848,7 +1040,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontLimitPixelSize" value="false"/>
         <property key="labeling/fontMaxPixelSize" value="10000"/>
         <property key="labeling/fontMinPixelSize" value="3"/>
-        <property key="labeling/fontSize" value="8.25"/>
+        <property key="labeling/fontSize" value="15"/>
         <property key="labeling/fontSizeInMapUnits" value="false"/>
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
@@ -1114,9 +1306,9 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="&quot;visee&quot;  ||  &quot;secteur&quot; " forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
-          <category render="true" symbol="0" value="bilateraleglise" label="bilateral"/>
-          <category render="true" symbol="1" value="unilateraleglise" label="unilateral"/>
-          <category render="false" symbol="2" value="bilateralclocher" label="bilateral clocher"/>
+          <category render="false" symbol="0" value="bilateraleglise" label="bilateral"/>
+          <category render="false" symbol="1" value="unilateraleglise" label="unilateral"/>
+          <category render="true" symbol="2" value="bilateralclocher" label="bilateral clocher"/>
         </categories>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="line" name="0">
@@ -1619,6 +1811,17 @@ def my_form_open(dialog, layer, feature):
     </Legend>
   </properties>
   <visibility-presets>
+    <visibility-preset name="Clocher station">
+      <layer style="" id="station20180611141256851"/>
+      <layer style="" id="visee20180611145248123"/>
+      <layer style="" id="Fond_ASIT_VD___cadastral20180611141146283"/>
+      <checked-legend-nodes id="station20180611141256851">
+        <checked-legend-node id="0"/>
+      </checked-legend-nodes>
+      <checked-legend-nodes id="visee20180611145248123">
+        <checked-legend-node id="2"/>
+      </checked-legend-nodes>
+    </visibility-preset>
     <visibility-preset name="Eglise station">
       <layer style="" id="station20180611141256851"/>
       <layer style="" id="cible20180611141522255"/>

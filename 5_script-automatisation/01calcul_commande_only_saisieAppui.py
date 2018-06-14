@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 #Import module
 import os
 import tkinter as tk
@@ -162,7 +163,7 @@ if geo_bool == 'O':
                         num = i
                         list_image_num = choose_filename('Choisir les images pour la saisie du point'+num)
                         image_num = transfo_to_pattern(list_image_num)
-                        image_for_pts.append({"num":num, "mm3d_saisie": 'mm3d SaisieAppuisInitQT '+image_num+' TerLocal '+num+' MesureInitiale.xml\n'})
+                        image_for_pts.append({"num":num, "mm3d_saisie": 'mm3d SaisieAppuisInitQT '+image_num+' TerLocal '+num+' MesureGCP.xml\n'})
 
                 prec_pts = str(input("Indiquer la précision des coordonnées des points GCP en m (Exemple: 0.02): "))
                 prec_image = str(input("Indiquer la précision de sélection des points dans les images en px (Exemple: 1): "))
@@ -170,10 +171,8 @@ if geo_bool == 'O':
                         r.write('mm3d GCPConvert AppInFile '+ GCP_txt+' Out='+GCP_xml+'\n')
                         for dico in image_for_pts:
                                 r.write(dico['mm3d_saisie'])
-                        r.write('mm3d GCPBascule '+all_img_patern+' TerLocal TerIni '+GCP_xml+' "MesureInitiale-S2D.xml"\n')
-                        r.write('mm3d SaisieAppuisPredicQT '+all_img_patern+' TerIni '+GCP_xml+' MesureFinal.xml\n')
-                        r.write('mm3d GCPBascule '+all_img_patern+' TerIni TerIni2 '+GCP_xml+' "MesureFinal-S2D.xml"\n')
-                        r.write('mm3d Campari '+all_img_patern+' TerIni2 TerFinal GCP=['+GCP_xml+','+prec_pts+',MesureFinal-S2D.xml,'+prec_image+']\n')
+                        r.write('mm3d GCPBascule '+all_img_patern+' TerLocal TerIni '+GCP_xml+' "MesureGCP-S2D.xml"\n')
+                        r.write('mm3d Campari '+all_img_patern+' TerIni TerFinal GCP=['+GCP_xml+','+prec_pts+',MesureGCP-S2D.xml,'+prec_image+']\n')
                         r.write('02analyse-resultat.py\n')
                         r.write('mm3d AperiCloud '+all_img_patern+' TerFinal\n')
                         r.write(output)
